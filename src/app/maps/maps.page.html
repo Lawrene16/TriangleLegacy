@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>maps</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <p align="center"><img height="350px" src="../../assets/Map Page/Map.png"></p>
+  </div>
+
+  <ion-grid>
+    <ion-row *ngFor="let place of DC">
+      <ion-col size="9">
+        <div style="margin-left: 4vw; border-radius: 6px; width: 90%; 
+        padding-left: 10px; padding-top: 10px;
+        color: white;
+        font-weight: 700;
+         margin-top: 3px; height: 40px; background-color: rgb(0, 78, 136)">
+        {{place.place}}, DC
+        </div>
+      </ion-col>
+      <ion-col size="2.5">
+        <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let place of MD">
+      <ion-col size="9">
+        <div style="margin-left: 4vw; border-radius: 6px;
+        padding-left: 10px; padding-top: 10px;
+        color: white;
+        font-weight: 700;
+         width: 90%; margin-top: 3px; height: 40px; background-color: rgb(0, 78, 136)">
+          {{place.place}}, MD
+        </div>
+      </ion-col>
+      <ion-col size="2.5">
+        <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row *ngFor="let place of NC">
+      <ion-col size="9">
+        <div style="margin-left: 4vw; border-radius: 6px;
+        padding-left: 10px; padding-top: 10px;
+        color: white;
+        font-weight: 700;
+         width: 90%; margin-top: 3px; height: 40px; background-color: rgb(0, 78, 136)">
+          {{place.place}}, NC
+        </div>
+      </ion-col>
+      <ion-col size="2.5">
+        <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row *ngFor="let place of SC">
+      <ion-col size="9">
+        <div style="margin-left: 4vw; border-radius: 6px;
+        padding-left: 10px; padding-top: 10px;
+        color: white;
+        font-weight: 700;
+         width: 90%; margin-top: 3px; height: 40px; background-color: rgb(0, 78, 136)">
+          {{place.place}}, SC
+        </div>
+      </ion-col>
+      <ion-col size="2.5">
+        <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row *ngFor="let place of VA">
+      <ion-col size="9">
+        <div style="margin-left: 4vw; border-radius: 6px;
+        padding-left: 10px; padding-top: 10px;
+        color: white;
+        font-weight: 700;
+         width: 90%; margin-top: 3px; height: 40px; background-color: rgb(0, 78, 136)">
+          {{place.place}}, VA
+        </div>
+      </ion-col>
+      <ion-col size="2.5">
+        <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
