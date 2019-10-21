@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CallNumber } from "@ionic-native/call-number/ngx";
+
 
 @Component({
   selector: 'app-maps',
@@ -10,233 +12,258 @@ export class MapsPage implements OnInit {
   DC = [
     {
       place: 'Washington',
-      number: '(202) 888-2960'
+      number: '2028882960'
     }
   ];
 
+  GA = [
+    {
+      place: 'Marietta West',
+      number: '7702990942'
+    },
+    {
+      place: 'Macon',
+      number: '6787829900'
+    },{
+      place: 'Buckhead',
+      number: '6785057746'
+    },{
+      place: 'Downtown Atlanta',
+      number: '4046001417'
+    },{
+      place: 'North Fulton',
+      number: '7709180511'
+    },{
+      place: 'North Atlanta',
+      number: '8005210643'
+    },{
+      place: 'South Atlanta',
+      number: '4044188097'
+    },
+  ]
   MD = [
     {
       place: 'Annapolis',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Baltimore County',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Bethesda',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Bowie',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Brandywine',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Charles County',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Cheverly',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Chevy Chase',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Clinton',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'College Park',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Columbia',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Crofton',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Clinton',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'College Park',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Columbia',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Elkridge',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Ellicott',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Fort Washington',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Gaithersburg',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Glen Burnie',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Greenbelt',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Kensington',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Langley Park',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Laurel',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Linthicum',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'New carrollton',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'North Brentwood',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Potomac',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Rockville',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Severn',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Silver Spring',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Takoma Park',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Tatallon',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Upper Marlboro',
-      number: '(301) 523-9419'
+      number: '3015239419'
     },{
       place: 'Woodmore',
-      number: '(301) 523-9419'
+      number: '3015239419'
     }
   ];
 
   NC = [
     {
       place: 'Apex',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Burlington',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Cary',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Chapel Hill',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Durham',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Holly Springs',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Knightdale',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Mecklenburg',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Morrisville',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Raleigh',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },{
       place: 'Wake Forest',
-      number: '(704) 504-7472'
+      number: '7045047472'
     },
   ];
 
   SC = [
     {
       place: 'Rock Hill',
-      number: 'XXXXX'
+      number: '7045047472'
     }
   ];
 
   VA = [
     {
       place: 'Alexandria',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Annandale',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Arlington',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Ashburn',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Burke',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Centreville',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Chantilly',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Dale City',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Dulles',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Dumfries',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Fairfax',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Great Falls',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Lansdowne',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Leesburg',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'McLean',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Occoquan',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Potomac Mills',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Reston',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Springfield',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Sterlin',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Tysons Corner',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Vienna',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },{
       place: 'Woodbridge',
-      number: '(202) 888-2960'
+      number: '7036731175'
     },
     
   ];
@@ -244,9 +271,19 @@ export class MapsPage implements OnInit {
 
     
   
-  constructor() { }
+  constructor(public callNumber: CallNumber) { }
 
   ngOnInit() {
   }
 
+  callPhone(number){
+    // console.log("will call")
+    this.callNumber.callNumber(number, true).then((res) =>{
+              console.log(res);
+
+    }).catch((err) =>{
+              console.log(err);
+
+    })
+  }
 }

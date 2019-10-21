@@ -20,7 +20,23 @@
         {{place.place}}, DC
         </div>
       </ion-col>
-      <ion-col size="2.5">
+      <ion-col (click)="callPhone(place.number)" size="2.5">
+        <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row *ngFor="let place of GA">
+      <ion-col size="9">
+        <div style="margin-left: 4vw; border-radius: 6px;
+        padding-left: 10px; padding-top: 10px;
+        color: white;
+        font-weight: 700;
+         width: 90%; margin-top: 3px; height: 40px; background-color: rgb(0, 78, 136)">
+          {{place.place}}, GA
+        </div>
+      </ion-col>
+      <ion-col (click)="callPhone(place.number)" size="2.5">
         <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
       </ion-col>
     </ion-row>
@@ -35,7 +51,7 @@
           {{place.place}}, MD
         </div>
       </ion-col>
-      <ion-col size="2.5">
+      <ion-col (click)="callPhone(place.number)" size="2.5">
         <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
       </ion-col>
     </ion-row>
@@ -51,7 +67,7 @@
           {{place.place}}, NC
         </div>
       </ion-col>
-      <ion-col size="2.5">
+      <ion-col (click)="callPhone(place.number)" size="2.5">
         <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
       </ion-col>
     </ion-row>
@@ -67,10 +83,11 @@
           {{place.place}}, SC
         </div>
       </ion-col>
-      <ion-col size="2.5">
+      <ion-col (click)="callPhone(place.number)" size="2.5">
         <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
       </ion-col>
     </ion-row>
+
 
 
     <ion-row *ngFor="let place of VA">
@@ -83,7 +100,7 @@
           {{place.place}}, VA
         </div>
       </ion-col>
-      <ion-col size="2.5">
+      <ion-col (click)="callPhone(place.number)" size="2.5">
         <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
       </ion-col>
     </ion-row>

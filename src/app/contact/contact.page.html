@@ -8,66 +8,39 @@
   <div class="topdiv">
   </div>
 
-  <p style="font-size: 17px" align="center"><b>Have a Question?</b></p>
+  <p style="font-size: 16px; font-weight: 600;" align="center">Have a Question?</p>
 
-
-  <br>
-  <b style="margin-left: 11px; margin-bottom: 7px; ">First and Last Name</b>
-  <br>
-
+  <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">First and Last Name</p>
   <div>
-    <ion-row class="itemclass">
-      <ion-input
+      <ion-input class="itemclass" style="height: 5vh;"
         type="text"
-      [(ngModel)]="maxbuyers" required></ion-input>  
-  </ion-row>  
+      [(ngModel)]="names" required></ion-input>  
   </div>
 
-
-  <br>
-  <br>
-  <b style="margin-left: 11px; margin-bottom: 7px; ">Email Address</b>
-  <br>
-  
+    <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">Email Address</p>
   <div>
-    <ion-row class="itemclass">
-      <ion-input
-        type="text"
-      [(ngModel)]="maxbuyers" required></ion-input>  
-  </ion-row>  
-  </div>
-  
-
-  <br>
-  <br>
-  <b style="margin-left: 11px; margin-bottom: 7px; ">Subject</b>
-  <br>
-  
-  <div>
-    <ion-row class="itemclass">
-      <ion-input
-        type="text"
-      [(ngModel)]="maxbuyers" required></ion-input>  
-  </ion-row>  
-  </div>
-  
-  <br>
-  <br>
-  <b style="margin-left: 11px; margin-bottom: 7px; ">Message</b>
-  <br>
-  
-  <div>
-    <ion-row class="itemclass">
-      <ion-input
-        type="text"
-      [(ngModel)]="maxbuyers" required></ion-input>  
-  </ion-row>  
+      <ion-input class="itemclass" style="height: 5vh;"
+        type="email"
+      [(ngModel)]="email" required></ion-input>  
   </div>
 
+      <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">Subject</p>
+  <div>
+      <ion-input class="itemclass" style="height: 5vh;"
+        type="text"
+      [(ngModel)]="subject" required></ion-input>  
+  </div>
 
-  <p align="center"><img height="65px" src="../../assets/Submit Button.png"></p>
+      <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">Message</p>
+  <div>
+      <ion-textarea class="itemclass" style="height: 150px;"
+        type="text"
+      [(ngModel)]="message" required></ion-textarea>  
+  </div>
+
+  <p align="center"><img (click)="submitform()" height="55px" src="../../assets/Submit Button.png"></p>
   
-  <p align="center" style="font-weight:600">Give us a call !!!!</p>
+  <p align="center" style="font-weight:500">Give us a call !!!!</p>
 
   <ion-row >
     <ion-col size="9">
@@ -79,7 +52,7 @@
       Washington DC
       </div>
     </ion-col>
-    <ion-col size="2.5">
+    <ion-col (click)="callphone(0)" size="2.5">
       <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
     </ion-col>
   </ion-row>
@@ -94,7 +67,7 @@
       Maryland
       </div>
     </ion-col>
-    <ion-col size="2.5">
+    <ion-col (click)="callphone(1)" size="2.5">
       <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
     </ion-col>
   </ion-row>
@@ -109,7 +82,7 @@
       North Carolina
       </div>
     </ion-col>
-    <ion-col size="2.5">
+    <ion-col (click)="callphone(2)" size="2.5">
       <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
     </ion-col>
   </ion-row>
@@ -124,7 +97,7 @@
       Virginia
       </div>
     </ion-col>
-    <ion-col size="2.5">
+    <ion-col (click)="callphone(3)" size="2.5">
       <img height="45px" style="margin-right: 3vw" src="../../assets/Map Page/Call Button.png">
     </ion-col>
   </ion-row>

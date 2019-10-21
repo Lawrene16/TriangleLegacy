@@ -1,5 +1,7 @@
 {
   "name": "trianglelegacy",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
