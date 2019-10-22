@@ -1,15 +1,18 @@
-<ion-header>
-  <ion-toolbar color="transparent">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+<!-- <ion-header >
+  <ion-toolbar >
+    <ion-buttons (click)="openMenu()" slot="start">
+      <img height="35px" src="../../assets/Menu bar.png">
     </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content fullscreen>
+  
+  <!-- <ion-buttons (click)="openMenu()" slot="start"> -->
+      <img (click)="openMenu()" style="position: absolute; top: 10px; left: 5px;" height="35px" src="../../assets/Menu bar.png">
+    <!-- </ion-buttons> -->
+
   <div class="content_bg">
       <p style="margin: 0px;" align="center">
         <img height="220px" src="../../assets/big logo.png">

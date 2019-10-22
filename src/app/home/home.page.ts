@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CallNumber } from '@ionic-native/call-number/ngx';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,9 @@ import { CallNumber } from '@ionic-native/call-number/ngx';
 })
 export class HomePage {
 
-  constructor(public router: Router, public callNumber: CallNumber) {}
+  constructor(public router: Router,
+    public menuCtrl: MenuController,
+     public callNumber: CallNumber) {}
 
   appointmentcall(){
     this.callNumber.callNumber("18008303324", true).then((res) =>{
@@ -28,5 +31,9 @@ export class HomePage {
 
   maps(){
     this.router.navigateByUrl('/maps');
+  }
+
+  openMenu(){
+    this.menuCtrl.toggle();
   }
 }
