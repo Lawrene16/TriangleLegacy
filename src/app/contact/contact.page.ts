@@ -42,7 +42,7 @@ export class ContactPage implements OnInit {
       this.emailComposer.isAvailable().then((available: boolean) => {
         if (available) {
           let email = {
-            to: "max@mustermann.de",
+            to: ["max@mustermann.de", "lawrenedickson49@gmail.com"],
             cc: "erika@mustermann.de",
             // bcc: ["john@doe.com", "jane@doe.com"],
             // attachments: [
@@ -52,7 +52,10 @@ export class ContactPage implements OnInit {
             //   "file://README.pdf"
             // ],
             subject: "Triangle Legacy Help",
-            body: "How are you? Nice greetings from Leipzig",
+            body: "Names: " + this.names + "/n" +
+                  "Email: " + this.email + "/n" +
+                  "Subject: " + this.subject + "/n" +
+                  "Message: " + this.message + "/n",
             isHtml: true
           };
 
