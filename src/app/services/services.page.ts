@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { Router } from '@angular/router';
 
 import { Router, NavigationExtras } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-services',
@@ -65,7 +66,7 @@ export class ServicesPage implements OnInit {
       details: ''
     }
   ]
-  constructor(public router: Router) { }
+  constructor(public router: Router, public menuCtrl: MenuController) { }
 
   ngOnInit() {
   }
@@ -82,6 +83,10 @@ export class ServicesPage implements OnInit {
     this.router.navigate(['servicesdetails'], navigationExtras);
 
     // this.router.navigateByUrl('/servicesdetails')
+  }
+
+  openMenu(){
+    this.menuCtrl.toggle();
   }
 
 }
