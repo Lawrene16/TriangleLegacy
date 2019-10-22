@@ -5,3 +5,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+    ion-toolbar {
+        --background: url('../../assets/Gradient Bar.jpg');
+        --background-repeat: no-repeat;
+        //  fixed center; 
+     }

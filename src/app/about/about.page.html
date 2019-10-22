@@ -4,11 +4,14 @@
       <img height="35px" src="../../assets/Menu bar.png">
     </ion-buttons>
 
-    <ion-buttons slot="end">
-      <img height="35px" src="../../assets/Phone Symbol.png">
-    </ion-buttons>
     <ion-title>
-      
+      <img height="45px" src="../../assets/applogo.png">
+    </ion-title>
+
+    <ion-buttons (click)="callUs()" slot="end">
+      <img height="40px" src="../../assets/Phone Symbol.png">
+    </ion-buttons>
+    <ion-title>  
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,7 +19,7 @@
 <ion-content>
   <div class="topdiv">
 
-    <p style="margin: 0px; padding-left: 10px; padding-top: 95px" align="center"><img (click)="callUs()" height="55px" src="../../assets/Phone Number Button.png"></p>
+    <p style="margin: 0px; padding-left: 10px; padding-top: 95px" align="center"><img (click)="callUs()" height="50px" src="../../assets/Phone Number Button.png"></p>
 
   </div>
 

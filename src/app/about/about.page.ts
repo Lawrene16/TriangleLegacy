@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CallNumber } from '@ionic-native/call-number/ngx';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-about',
@@ -8,7 +9,8 @@ import { CallNumber } from '@ionic-native/call-number/ngx';
 })
 export class AboutPage implements OnInit {
 
-  constructor(public callNumber: CallNumber) { }
+  constructor(public callNumber: CallNumber,
+    public menuCtrl: MenuController) { }
 
   ngOnInit() {
   }
@@ -21,6 +23,9 @@ export class AboutPage implements OnInit {
     })
   }
 
+  openMenu(){
+    this.menuCtrl.toggle();
+  }
   
 
 }
