@@ -21,6 +21,7 @@ export class HomePage {
 
 
   submitform(){
+        this.router.navigateByUrl('/forms');
 
   }
 

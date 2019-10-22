@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 @Component({
   selector: 'app-servicesdetails',
@@ -10,7 +11,9 @@ export class ServicesdetailsPage implements OnInit {
   data;
   details = "";
 
-  constructor( public route: ActivatedRoute,public router: Router) { }
+  constructor( public route: ActivatedRoute,
+    public callNumber: CallNumber,
+    public router: Router) { }
 
     ngOnInit() {
     this.route.queryParams.subscribe(params => {
@@ -27,4 +30,11 @@ export class ServicesdetailsPage implements OnInit {
 
   }
 
+  callUs(){
+    this.callNumber.callNumber("18008303324", true).then((res) =>{
+       console.log(res)
+    }).catch((err) =>{
+      console.log(err)
+    })
+  }
 }
