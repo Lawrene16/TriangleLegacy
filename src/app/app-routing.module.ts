@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: 'reviews', loadChildren: './reviews/reviews.module#ReviewsPageModule' },
   { path: 'forms', loadChildren: './forms/forms.module#FormsPageModule' },
   { path: 'maps', loadChildren: './maps/maps.module#MapsPageModule' },
-  { path: 'services', loadChildren: './services/services.module#ServicesPageModule' }
+  { path: 'services', loadChildren: './services/services.module#ServicesPageModule' },
+  { path: 'servicesdetails', loadChildren: './servicesdetails/servicesdetails.module#ServicesdetailsPageModule' }
 ];
 
 @NgModule({

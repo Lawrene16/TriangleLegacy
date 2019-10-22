@@ -277,7 +277,7 @@ export class MapsPage implements OnInit {
   }
 
   callPhone(number){
-    // console.log("will call")
+    console.log(number)
     this.callNumber.callNumber(number, true).then((res) =>{
               console.log(res);
 

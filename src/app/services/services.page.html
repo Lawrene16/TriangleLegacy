@@ -5,5 +5,9 @@
 </ion-header>
 
 <ion-content>
-
+  <div>
+    <div *ngFor="let service of services; let i = index;" (click)="showDetails(i)" style="float: left;" class="allservices">
+      <img src="../../assets/sp/{{service.title}}.jpg" style="height: 100%; width: 100%;">
+    </div>
+  </div>
 </ion-content>

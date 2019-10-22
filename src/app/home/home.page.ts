@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public router: Router, public callNumber: CallNumber) {}
 
+  appointmentcall(){
+    this.callNumber.callNumber("18008303324", true).then((res) =>{
+      console.log(res)
+    }).catch((err) =>{
+      console.log(err)
+    })
+  }
+
+
+  submitform(){
+
+  }
+
+
+  maps(){
+    this.router.navigateByUrl('/maps');
+  }
 }
