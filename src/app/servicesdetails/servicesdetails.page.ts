@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CallNumber } from '@ionic-native/call-number/ngx';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-servicesdetails',
@@ -13,6 +14,7 @@ export class ServicesdetailsPage implements OnInit {
 
   constructor( public route: ActivatedRoute,
     public callNumber: CallNumber,
+    public menuCtrl: MenuController,
     public router: Router) { }
 
     ngOnInit() {
@@ -28,6 +30,11 @@ export class ServicesdetailsPage implements OnInit {
       }
     });
 
+  }
+
+
+  openMenu() {
+    this.menuCtrl.toggle();
   }
 
   callUs(){
