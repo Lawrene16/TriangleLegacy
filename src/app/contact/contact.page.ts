@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { CallNumber } from "@ionic-native/call-number/ngx";
 import { EmailComposer } from "@ionic-native/email-composer/ngx";
-import { ToastController, MenuController } from '@ionic/angular';
+import { ToastController, MenuController, LoadingController } from "@ionic/angular";
+declare var emailjs: any;
 
 @Component({
   selector: "app-contact",
@@ -19,6 +20,7 @@ export class ContactPage implements OnInit {
     private callNumber: CallNumber,
     private menuCtrl: MenuController,
     private toastCtrl: ToastController,
+    private loadingCtrl: LoadingController,
     private emailComposer: EmailComposer
   ) {}
 
@@ -26,43 +28,48 @@ export class ContactPage implements OnInit {
 
   submitform() {
     if (this.names == "") {
-      this.presentToast("Name field cannot be left blank")
+      this.presentToast("Name field cannot be left blank");
     } else if (
       this.email == "" ||
       this.email.length < 3 ||
       !this.email.includes("@") ||
       !this.email.includes(".")
     ) {
-      this.presentToast("Invalid email format")
+      this.presentToast("Invalid email format");
     } else if (this.subject == "") {
       this.presentToast("Subject field cannot be left blank");
     } else if (this.message == "") {
-      this.presentToast("Message field cannot be left blank")
+      this.presentToast("Message field cannot be left blank");
     } else {
-      this.emailComposer.isAvailable().then((available: boolean) => {
-        if (available) {
-          let email = {
-            to: ["max@mustermann.de", "lawrenedickson49@gmail.com"],
-            cc: "erika@mustermann.de",
-            // bcc: ["john@doe.com", "jane@doe.com"],
-            // attachments: [
-            //   "file://img/logo.png",
-            //   "res://icon.png",
-            //   "base64:icon.png//iVBORw0KGgoAAAANSUhEUg...",
-            //   "file://README.pdf"
-            // ],
-            subject: "Triangle Legacy Help",
-            body: "Names: " + this.names + "/n" +
-                  "Email: " + this.email + "/n" +
-                  "Subject: " + this.subject + "/n" +
-                  "Message: " + this.message + "/n",
-            isHtml: true
-          };
+      this.loadingCtrl.create({message: "Please wait", duration: 3000}).then((res) =>{
+        res.present();
+   
+        setTimeout(() => {
+          
+        this.presentToast("Your request has been submitted successfully");
+        this.names = "";
+        this.email = "";
+        this.subject = "";
+        this.message = "";
 
-          this.emailComposer.open(email);
-        }
+        }, 4500);
+        // this.sendEmail("lawrenedickson49@gmail.com")
+        this.sendEmail("trianglelegacymanager@gmail.com");
+        this.sendEmail("trianglelegacy@gmail.com");
       });
+   
     }
+
+  }
+
+  sendEmail(to_email) {
+    emailjs.send("gmail", "template_6Fqm0iy9", {
+      to_email: to_email,
+      full_name: this.names,
+      from_email: this.email,
+      subject: this.subject,
+      message: this.message
+    });
   }
 
   callphone(index) {
@@ -98,21 +105,23 @@ export class ContactPage implements OnInit {
     const toast = await this.toastCtrl.create({
       message: message,
       duration: 2000,
-      color: 'dark'
+      color: "dark"
     });
     toast.present();
   }
 
-  callUs(){
-    this.callNumber.callNumber("18008303324", true).then((res) =>{
-       console.log(res)
-    }).catch((err) =>{
-      console.log(err)
-    })
+  callUs() {
+    this.callNumber
+      .callNumber("18008303324", true)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
-
-  openMenu(){
+  openMenu() {
     this.menuCtrl.toggle();
   }
 }

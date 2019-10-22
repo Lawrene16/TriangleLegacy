@@ -483,7 +483,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu type=\"overlay\">\n      <ion-content>\n        <!-- <div class=\"content_bg\"> -->\n          <ion-list>\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n            <ion-item [routerDirection]=\"'root'\" [routerLink]=\"[p.url]\">\n              <ion-icon slot=\"start\" [name]=\"p.icon\"></ion-icon>\n              <ion-label>\n                {{p.title}}\n              </ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n        </ion-list>\n        <!-- </div> -->\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>\n"
+module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu type=\"overlay\">\n      <ion-content>\n        <div class=\"content_bg\">\n\n          <div style=\"padding-top: 41vh;\">\n\n          </div>\n\n          <div>\n            <img (click)=\"toggleMenu()\" style=\"margin-left: 25px; margin-top: 5px;\" [routerDirection]=\"'root'\" [routerLink]=\"[p.url]\" *ngFor=\"let p of appPages\" height=\"35px\" src=\"../assets/{{p.icon}}\">\n          </div>\n\n\n          <!-- <ion-list>\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n            <ion-item [routerDirection]=\"'root'\" [routerLink]=\"[p.url]\">\n              <ion-icon slot=\"start\" [name]=\"p.icon\"></ion-icon>\n              <ion-label>\n                {{p.title}}\n              </ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n        </ion-list> -->\n\n        <p align=\"center\" style=\"margin:0px\">\n          <img height=\"34px\" src=\"../assets/White Line.png\">\n        </p>\n\n        <p align=\"center\" style=\"margin:0px\">\n          <img height=\"34px\" src=\"../assets/24 Hour Emergency Service.png\">\n        </p>\n\n        </div>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>\n"
 
 /***/ }),
 
@@ -550,7 +550,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".content_bg {\n  background-image: url('Side Bar Block.png');\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 100%;\n  width: 140%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aWxsaWZpeGluYy9Eb2N1bWVudHMvVHJpYW5nbGVMZWdhY3kvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDJDQUFBO0VBQ0EsNEJBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGVudF9iZ3tcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uL2Fzc2V0cy9TaWRlIEJhciBCbG9jay5wbmcnKTtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxNDAlO1xufSIsIi5jb250ZW50X2JnIHtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vYXNzZXRzL1NpZGUgQmFyIEJsb2NrLnBuZ1wiKTtcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTQwJTtcbn0iXX0= */"
+module.exports = ".content_bg {\n  background-image: url('Side Bar Block.png');\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 100%;\n  width: 101%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aWxsaWZpeGluYy9Eb2N1bWVudHMvVHJpYW5nbGVMZWdhY3kvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDJDQUFBO0VBQ0EsNEJBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGVudF9iZ3tcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uL2Fzc2V0cy9TaWRlIEJhciBCbG9jay5wbmcnKTtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDElO1xufSIsIi5jb250ZW50X2JnIHtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vYXNzZXRzL1NpZGUgQmFyIEJsb2NrLnBuZ1wiKTtcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAxJTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -575,45 +575,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(platform, splashScreen, statusBar) {
+    function AppComponent(platform, splashScreen, menuCtrl, statusBar) {
         this.platform = platform;
         this.splashScreen = splashScreen;
+        this.menuCtrl = menuCtrl;
         this.statusBar = statusBar;
         this.appPages = [
             {
                 title: 'HOME',
                 url: '/home',
-                icon: 'home'
+                icon: 'Home Button.png'
             },
             {
                 title: 'SERVICES',
                 url: '/services',
-                icon: 'list'
+                icon: 'Service Button.png'
             },
             {
                 title: 'MAP',
                 url: '/maps',
-                icon: 'list'
+                icon: 'Map Button.png'
             },
             {
                 title: 'FORM',
                 url: '/forms',
-                icon: 'list'
+                icon: 'Form Symbol.png'
             },
             {
                 title: 'REVIEWS',
                 url: '/reviews',
-                icon: 'list'
+                icon: 'Review Button.png'
             },
             {
                 title: 'ABOUT US',
                 url: '/about',
-                icon: 'list'
+                icon: 'About Us Button.png'
             },
             {
                 title: 'CONTACT US',
                 url: '/contact',
-                icon: 'list'
+                icon: 'Contact Us Button.png'
             }
         ];
         this.initializeApp();
@@ -625,9 +626,13 @@ var AppComponent = /** @class */ (function () {
             _this.splashScreen.hide();
         });
     };
+    AppComponent.prototype.toggleMenu = function () {
+        this.menuCtrl.toggle();
+    };
     AppComponent.ctorParameters = function () { return [
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
         { type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"] },
+        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"] },
         { type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"] }
     ]; };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -638,6 +643,7 @@ var AppComponent = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"],
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"]])
     ], AppComponent);
     return AppComponent;

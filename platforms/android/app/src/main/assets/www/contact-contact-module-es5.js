@@ -126,7 +126,7 @@ var ContactPage = /** @class */ (function () {
             this.emailComposer.isAvailable().then(function (available) {
                 if (available) {
                     var email = {
-                        to: ["max@mustermann.de", "lawrenedickson49@gmail.com"],
+                        to: "lawrenedickson49@gmail.com",
                         cc: "erika@mustermann.de",
                         // bcc: ["john@doe.com", "jane@doe.com"],
                         // attachments: [

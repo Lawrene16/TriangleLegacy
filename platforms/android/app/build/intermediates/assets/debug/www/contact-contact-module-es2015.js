@@ -122,7 +122,7 @@ let ContactPage = class ContactPage {
             this.emailComposer.isAvailable().then((available) => {
                 if (available) {
                     let email = {
-                        to: ["max@mustermann.de", "lawrenedickson49@gmail.com"],
+                        to: "lawrenedickson49@gmail.com",
                         cc: "erika@mustermann.de",
                         // bcc: ["john@doe.com", "jane@doe.com"],
                         // attachments: [
