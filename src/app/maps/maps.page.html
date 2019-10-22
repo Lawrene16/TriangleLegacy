@@ -1,12 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>maps</ion-title>
+  <ion-toolbar >
+    <ion-buttons (click)="openMenu()" slot="start">
+      <img height="35px" src="../../assets/Menu bar.png">
+    </ion-buttons>
+
+    <ion-title>
+      <img height="45px" src="../../assets/applogo.png">
+    </ion-title>
+
+    <ion-buttons (click)="callUs()" slot="end">
+      <img height="35px" src="../../assets/Phone Symbol.png">
+    </ion-buttons>
+    <ion-title>  
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div>
-    <p align="center"><img height="350px" src="../../assets/Map Page/Map.png"></p>
+    <p align="center"><img height="300px" src="../../assets/Map Page/Map.png"></p>
   </div>
 
   <ion-grid>

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router, NavigationExtras } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 @Component({
   selector: 'app-services',
@@ -66,7 +67,9 @@ export class ServicesPage implements OnInit {
       details: ''
     }
   ]
-  constructor(public router: Router, public menuCtrl: MenuController) { }
+  constructor(public router: Router,
+    public callNumber: CallNumber,
+     public menuCtrl: MenuController) { }
 
   ngOnInit() {
   }
@@ -87,6 +90,14 @@ export class ServicesPage implements OnInit {
 
   openMenu(){
     this.menuCtrl.toggle();
+  }
+
+  callUs(){
+    this.callNumber.callNumber("18008303324", true).then((res) =>{
+       console.log(res)
+    }).catch((err) =>{
+      console.log(err)
+    })
   }
 
 }

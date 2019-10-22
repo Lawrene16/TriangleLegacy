@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CallNumber } from "@ionic-native/call-number/ngx";
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -271,7 +272,8 @@ export class MapsPage implements OnInit {
 
     
   
-  constructor(public callNumber: CallNumber) { }
+  constructor(public callNumber: CallNumber, 
+    public menuCtrl: MenuController) { }
 
   ngOnInit() {
   }
@@ -285,5 +287,18 @@ export class MapsPage implements OnInit {
               console.log(err);
 
     })
+  }
+
+  callUs(){
+    this.callNumber.callNumber("18008303324", true).then((res) =>{
+       console.log(res)
+    }).catch((err) =>{
+      console.log(err)
+    })
+  }
+
+
+  openMenu(){
+    this.menuCtrl.toggle();
   }
 }
