@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { CallNumber } from "@ionic-native/call-number/ngx";
 import { EmailComposer } from "@ionic-native/email-composer/ngx";
-import { ToastController } from '@ionic/angular';
+import { ToastController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: "app-contact",
@@ -17,6 +17,7 @@ export class ContactPage implements OnInit {
 
   constructor(
     private callNumber: CallNumber,
+    private menuCtrl: MenuController,
     private toastCtrl: ToastController,
     private emailComposer: EmailComposer
   ) {}
@@ -97,5 +98,18 @@ export class ContactPage implements OnInit {
       color: 'dark'
     });
     toast.present();
+  }
+
+  callUs(){
+    this.callNumber.callNumber("18008303324", true).then((res) =>{
+       console.log(res)
+    }).catch((err) =>{
+      console.log(err)
+    })
+  }
+
+
+  openMenu(){
+    this.menuCtrl.toggle();
   }
 }

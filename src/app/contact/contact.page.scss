@@ -52,3 +52,9 @@ ion-input {
     outline-style: auto;
     // outline-color:color($colors, redlike);
 }
+
+    ion-toolbar {
+        --background: url('../../assets/Gradient Bar.jpg');
+        --background-repeat: no-repeat;
+        //  fixed center; 
+     }

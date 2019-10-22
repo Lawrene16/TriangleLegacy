@@ -1,6 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>contact</ion-title>
+  <ion-toolbar >
+    <ion-buttons (click)="openMenu()" slot="start">
+      <img height="35px" src="../../assets/Menu bar.png">
+    </ion-buttons>
+
+    <ion-title>
+      <img height="45px" src="../../assets/applogo.png">
+    </ion-title>
+
+    <ion-buttons (click)="callUs()" slot="end">
+      <img height="40px" src="../../assets/Phone Symbol.png">
+    </ion-buttons>
+    <ion-title>  
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -38,7 +50,7 @@
       [(ngModel)]="message" required></ion-textarea>  
   </div>
 
-  <p align="center"><img (click)="submitform()" height="55px" src="../../assets/Submit Button.png"></p>
+  <p align="center"><img (click)="submitform()" height="50px" src="../../assets/Submit Button.png"></p>
   
   <p align="center" style="font-weight:500">Give us a call !!!!</p>
 
