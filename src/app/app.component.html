@@ -2,8 +2,18 @@
   <ion-split-pane>
     <ion-menu type="overlay">
       <ion-content>
-        <!-- <div class="content_bg"> -->
-          <ion-list>
+        <div class="content_bg">
+
+          <div style="padding-top: 41vh;">
+
+          </div>
+
+          <div>
+            <img (click)="toggleMenu()" style="margin-left: 25px; margin-top: 5px;" [routerDirection]="'root'" [routerLink]="[p.url]" *ngFor="let p of appPages" height="35px" src="../assets/{{p.icon}}">
+          </div>
+
+
+          <!-- <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
@@ -12,8 +22,17 @@
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
-        <!-- </div> -->
+        </ion-list> -->
+
+        <p align="center" style="margin:0px">
+          <img height="34px" src="../assets/White Line.png">
+        </p>
+
+        <p align="center" style="margin:0px">
+          <img height="34px" src="../assets/24 Hour Emergency Service.png">
+        </p>
+
+        </div>
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -14,43 +14,44 @@ export class AppComponent {
     {
       title: 'HOME',
       url: '/home',
-      icon: 'home'
+      icon: 'Home Button.png'
     },
     {
       title: 'SERVICES',
       url: '/services',
-      icon: 'list'
+      icon: 'Service Button.png'
     },
     {
       title: 'MAP',
       url: '/maps',
-      icon: 'list'
+      icon: 'Map Button.png'
     },
     {
       title: 'FORM',
       url: '/forms',
-      icon: 'list'
+      icon: 'Form Symbol.png'
     },
     {
       title: 'REVIEWS',
       url: '/reviews',
-      icon: 'list'
+      icon: 'Review Button.png'
     },
     {
       title: 'ABOUT US',
       url: '/about',
-      icon: 'list'
+      icon: 'About Us Button.png'
     },
     {
       title: 'CONTACT US',
       url: '/contact',
-      icon: 'list'
+      icon: 'Contact Us Button.png'
     }
   ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
+    private menuCtrl: MenuController,
     private statusBar: StatusBar
   ) {
     this.initializeApp();
@@ -61,5 +62,9 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  toggleMenu(){
+    this.menuCtrl.toggle();
   }
 }
