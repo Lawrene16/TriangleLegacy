@@ -4,12 +4,10 @@
       <ion-content>
         <div class="content_bg">
 
-          <div style="padding-top: 41vh;">
-
-          </div>
+          <p style="margin: 0px; padding-top: 15px; padding-bottom: 10px;" align="center"><img height="150px" src="../assets/new logo no padding.png"></p>
 
           <div>
-            <img (click)="toggleMenu()" style="margin-left: 25px; margin-top: 5px;" [routerDirection]="'root'" [routerLink]="[p.url]" *ngFor="let p of appPages" height="35px" src="../assets/{{p.icon}}">
+            <img (click)="toggleMenu()" style="margin-left: 25px; margin-top: 12px;" [routerDirection]="'root'" [routerLink]="[p.url]" *ngFor="let p of appPages" height="35px" src="../assets/{{p.icon}}">
           </div>
 
 
@@ -24,11 +22,11 @@
           </ion-menu-toggle>
         </ion-list> -->
 
-        <p align="center" style="margin:0px">
+        <p align="center" style="margin:0px; padding-top: 10px;">
           <img height="34px" src="../assets/White Line.png">
         </p>
 
-        <p align="center" style="margin:0px">
+        <p align="center" (click)="callUs()" style="margin:0px;">
           <img height="34px" src="../assets/24 Hour Emergency Service.png">
         </p>
 

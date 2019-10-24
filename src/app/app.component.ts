@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Platform, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 @Component({
   selector: 'app-root',
@@ -51,6 +52,7 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
+    private callNumber: CallNumber,
     private menuCtrl: MenuController,
     private statusBar: StatusBar
   ) {
@@ -65,6 +67,14 @@ export class AppComponent {
       this.statusBar.overlaysWebView(false); 
       this.splashScreen.hide();
     });
+  }
+
+  callUs(){
+    this.callNumber.callNumber("2023350442", true).then((res) =>{
+      console.log(res)
+    }).catch((err) =>{
+      console.log(err);
+    })
   }
 
   toggleMenu(){
