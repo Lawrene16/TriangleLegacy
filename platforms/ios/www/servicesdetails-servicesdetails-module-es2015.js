@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar >\n    <ion-buttons (click)=\"openMenu()\" slot=\"start\">\n      <img height=\"35px\" src=\"../../assets/Menu bar.png\">\n    </ion-buttons>\n\n    <ion-title>\n      <img height=\"45px\" src=\"../../assets/applogo.png\">\n    </ion-title>\n\n    <ion-buttons (click)=\"callUs()\" slot=\"end\">\n      <img height=\"40px\" src=\"../../assets/Phone Symbol.png\">\n    </ion-buttons>\n    <ion-title>  \n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div style=\"width: 100%; \n    height: 200px;\" \n    >\n\n    <div style=\"width: 100%; top: 100px; position: absolute; height: 60px;\">\n          <p style=\"margin: 0px;  padding-left: 10px;\" align=\"center\"><img (click)=\"callUs()\" height=\"48px\" src=\"../../assets/sp/Contact Us Today Button.png\"></p>\n    </div>\n\n    <img style=\"width: 100%; height: 100%;\" src=\"../../assets/sp/{{data.title}} Page Photo.jpg\">\n  </div>\n\n  <p>\n    {{details}}\n  </p>\n\n\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar >\n    <ion-buttons (click)=\"openMenu()\" slot=\"start\">\n      <img height=\"35px\" src=\"../../assets/Menu bar.png\">\n    </ion-buttons>\n\n    <ion-title>\n      <img height=\"45px\" src=\"../../assets/applogo.png\">\n    </ion-title>\n\n    <ion-buttons (click)=\"callUs()\" slot=\"end\">\n      <img height=\"40px\" src=\"../../assets/Phone Symbol.png\">\n    </ion-buttons>\n    <ion-title>  \n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div style=\"width: 100%; \n    height: 200px;\" \n    >\n\n    <div style=\"width: 100%; top: 100px; position: absolute; height: 60px;\">\n          <p style=\"margin: 0px;  padding-left: 10px;\" align=\"center\"><img (click)=\"callUs()\" height=\"48px\" src=\"../../assets/sp/Contact Us Today Button.png\"></p>\n    </div>\n\n    <img style=\"width: 100%; height: 100%;\" src=\"../../assets/sp/{{data.title}} Page Photo.jpg\">\n  </div>\n\n  <p style=\"white-space: pre-line; padding: 10px; font-size: 15px\" id=\"detailsdiv\">\n    <!-- {{details}} -->\n  </p>\n\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -66,7 +66,7 @@ ServicesdetailsPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".topdiv {\n  width: 100%;\n  height: 210px;\n  background-image: url('Photo.png');\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\nion-toolbar {\n  --background: url('Gradient Bar.jpg');\n  --background-repeat: no-repeat;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aWxsaWZpeGluYy9Eb2N1bWVudHMvVHJpYW5nbGVMZWdhY3kvc3JjL2FwcC9zZXJ2aWNlc2RldGFpbHMvc2VydmljZXNkZXRhaWxzLnBhZ2Uuc2NzcyIsInNyYy9hcHAvc2VydmljZXNkZXRhaWxzL3NlcnZpY2VzZGV0YWlscy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxXQUFBO0VBQ0EsYUFBQTtFQUNBLGtDQUFBO0VBQ0EsNEJBQUE7RUFDQSxzQkFBQTtBQ0NKOztBREVJO0VBQ0kscUNBQUE7RUFDQSw4QkFBQTtBQ0NSIiwiZmlsZSI6InNyYy9hcHAvc2VydmljZXNkZXRhaWxzL3NlcnZpY2VzZGV0YWlscy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudG9wZGl2e1xuICAgIHdpZHRoOiAxMDAlOyBcbiAgICBoZWlnaHQ6IDIxMHB4O1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vYXNzZXRzL1Bob3RvLnBuZycpO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3Zlcjtcbn1cblxuICAgIGlvbi10b29sYmFyIHtcbiAgICAgICAgLS1iYWNrZ3JvdW5kOiB1cmwoJy4uLy4uL2Fzc2V0cy9HcmFkaWVudCBCYXIuanBnJyk7XG4gICAgICAgIC0tYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICAgICAgLy8gIGZpeGVkIGNlbnRlcjsgXG4gICAgIH0iLCIudG9wZGl2IHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMjEwcHg7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uL2Fzc2V0cy9QaG90by5wbmdcIik7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59XG5cbmlvbi10b29sYmFyIHtcbiAgLS1iYWNrZ3JvdW5kOiB1cmwoXCIuLi8uLi9hc3NldHMvR3JhZGllbnQgQmFyLmpwZ1wiKTtcbiAgLS1iYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xufSJdfQ== */"
+module.exports = ".topdiv {\n  width: 100%;\n  height: 210px;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\nion-toolbar {\n  --background: url('Gradient Bar.jpg');\n  --background-repeat: no-repeat;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aWxsaWZpeGluYy9Eb2N1bWVudHMvVHJpYW5nbGVMZWdhY3kvc3JjL2FwcC9zZXJ2aWNlc2RldGFpbHMvc2VydmljZXNkZXRhaWxzLnBhZ2Uuc2NzcyIsInNyYy9hcHAvc2VydmljZXNkZXRhaWxzL3NlcnZpY2VzZGV0YWlscy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxXQUFBO0VBQ0EsYUFBQTtFQUNBLDRCQUFBO0VBQ0Esc0JBQUE7QUNDSjs7QURFSTtFQUNJLHFDQUFBO0VBQ0EsOEJBQUE7QUNDUiIsImZpbGUiOiJzcmMvYXBwL3NlcnZpY2VzZGV0YWlscy9zZXJ2aWNlc2RldGFpbHMucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRvcGRpdntcbiAgICB3aWR0aDogMTAwJTsgXG4gICAgaGVpZ2h0OiAyMTBweDtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59XG5cbiAgICBpb24tdG9vbGJhciB7XG4gICAgICAgIC0tYmFja2dyb3VuZDogdXJsKCcuLi8uLi9hc3NldHMvR3JhZGllbnQgQmFyLmpwZycpO1xuICAgICAgICAtLWJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgICAgIC8vICBmaXhlZCBjZW50ZXI7IFxuICAgICB9IiwiLnRvcGRpdiB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDIxMHB4O1xuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufVxuXG5pb24tdG9vbGJhciB7XG4gIC0tYmFja2dyb3VuZDogdXJsKFwiLi4vLi4vYXNzZXRzL0dyYWRpZW50IEJhci5qcGdcIik7XG4gIC0tYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -91,20 +91,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ServicesdetailsPage = class ServicesdetailsPage {
+    // data = {
+    //   details: 'Dryer vents are one of the least suspected culprits of fires……residential or commercial! Although easily overlooked, they have the capability to cause paramount damage to your home or property, if they are not maintained properly. According to the United States National Fire Protection Agency (NFPA), in 2010 there were an estimated 16,800 reported dryer-related residential fires which ultimately resulted in 51 civilian deaths, 380 civilian injuries and $236 million in direct property damage!\n\nDryer-related fires are more likely to occur when there is a build-up of lint and debris inside the dryer hose and vent. This build-up has the tendency to obstruct the flow of hot air and gasses that would normally be exhausted to the outside of your home or property. Continued use of a dryer with a clogged vent can ultimately result in a residential or commercial fire.\n\nA quick and painless way to prevent a potential dryer-related fire?Arrange to have your dryer vents professionally cleaned and inspected at least once a year.\n\nThe advantages of dryer vent cleaning are prevention of build-up of lint and debris, reduction of the risk of dryer-related home or property fires, and improvement of the efficiency of your dryer, thereby saving you money!\n\nFor a free consultation & estimate relative to all your dryer vent cleaning needs, please give us a call!'
+    // }
     constructor(route, callNumber, menuCtrl, router) {
         this.route = route;
         this.callNumber = callNumber;
         this.menuCtrl = menuCtrl;
         this.router = router;
-        this.details = "";
     }
     ngOnInit() {
+        // document.getElementById("detailsdiv").innerHTML = this.data.details;
         this.route.queryParams.subscribe(params => {
             if (this.router.getCurrentNavigation().extras.state) {
                 this.data = this.router.getCurrentNavigation().extras.state.service;
-                this.details = this.data.details;
-                console.log(this.details);
-                this.details.replace(".", "<br>");
+                document.getElementById("detailsdiv").innerHTML = this.data.details;
             }
         });
     }

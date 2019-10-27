@@ -23,31 +23,32 @@
   <p style="font-size: 16px; font-weight: 600;" align="center">Have a Question?</p>
 
   <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">First and Last Name</p>
-  <div>
-      <ion-input class="itemclass"
-        type="text"
-      [(ngModel)]="names" required></ion-input>  
+  <div class="boxes">
+    <ion-input type="text"
+    [(ngModel)]="names"></ion-input>
   </div>
 
-    <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">Email Address</p>
-  <div>
-      <ion-input class="itemclass"
-        type="email"
-      [(ngModel)]="email" required></ion-input>  
+
+
+  <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">Email Address</p>
+  <div class="boxes">
+    <ion-input type="email"
+    [(ngModel)]="email"></ion-input>
   </div>
 
-      <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">Subject</p>
-  <div>
-      <ion-input class="itemclass"
-        type="text"
-      [(ngModel)]="subject" required></ion-input>  
+
+
+  <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">Subject</p>
+  <div class="boxes">
+    <ion-input type="text"
+    [(ngModel)]="subject"></ion-input>
   </div>
 
-      <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">Message</p>
-  <div>
-      <ion-textarea class="itemclass2"
-        type="text"
-      [(ngModel)]="message" required></ion-textarea>  
+
+  <p style="margin-left: 11px; font-size: 14px; font-weight: 500; margin-bottom: 7px; ">Message</p>
+  <div class="boxes2">
+    <ion-input type="text"
+    [(ngModel)]="subject"></ion-input>
   </div>
 
   <p align="center"><img (click)="submitform()" height="50px" src="../../assets/Submit Button.png"></p>

@@ -6,52 +6,21 @@
     background-size: cover;
 }
 
-ion-input {
-    &.custom-input {
-      font-size: 20px; //sets text font size
-      ::placeholder {
-        font-size: 18px; 
-        color: white;//sets placeholder font size
-      }
-    }
-  }
-
-
-  .itemclass{
-    height: 5vh;
-    align-content: center;
-    margin-top: 5px;
-    margin-bottom: 25px;
-    width: 94%;
-    margin-left: 10px;
-    outline-color: rgba(190, 189, 189, 0.329);
-    margin-right: 10px;        
-    // background:color($colors, grey);
-    // background: rgba(158, 158, 158, 0.6);
-    padding-left: 10px;
-    border-radius: 4px;  
-    // border: 1px solid #000;
-    outline-style: auto;
-    // outline-color:color($colors, redlike);
+.boxes{
+  border: 1px solid #c3c3c3;
+  border-radius: 4px; 
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-  .itemclass2{
-    height: 150px;
-    align-content: center;
-    margin-top: 5px;
-    margin-bottom: 25px;
-    width: 94%;
-    margin-left: 10px;
-    outline-color: rgba(190, 189, 189, 0.329);
-    margin-right: 10px;        
-    // background:color($colors, grey);
-    // background: rgba(158, 158, 158, 0.6);
-    // padding-left: 10px;
-    border-radius: 4px;  
-    // border: 1px solid #000;
-    outline-style: auto;
-    // outline-color:color($colors, redlike);
+.boxes2{
+  border: 1px solid #c3c3c3;
+  border-radius: 4px; 
+  height: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
+
 
     ion-toolbar {
         --background: url('../../assets/Gradient Bar.jpg');
